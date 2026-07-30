@@ -1,9 +1,11 @@
 import asyncio
 import sys
+import pytest
 from main import safe_print
 from core.engine import LoomEngine
 
 
+@pytest.mark.asyncio
 async def test_main_directly():
     safe_print("=" * 60)
     safe_print("          LOOM AI ENGINE - DIRECT FUNCTIONAL TEST           ")
