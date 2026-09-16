@@ -1,5 +1,5 @@
 """
-Tools module for Loom AI Engine.
+Tools module for Agno AI Engine.
 
 Provides utility tools like PDF generation.
 """

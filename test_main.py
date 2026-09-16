@@ -2,17 +2,17 @@ import asyncio
 import sys
 import pytest
 from main import safe_print
-from core.engine import LoomEngine
+from core.engine import AgnoEngine
 
 
 @pytest.mark.asyncio
 async def test_main_directly():
     safe_print("=" * 60)
-    safe_print("          LOOM AI ENGINE - DIRECT FUNCTIONAL TEST           ")
+    safe_print("          AGNO AI ENGINE - DIRECT FUNCTIONAL TEST           ")
     safe_print("=" * 60)
 
-    # Initialize LoomEngine with mock provider for reproducible testing
-    engine = LoomEngine(provider="mock")
+    # Initialize AgnoEngine with mock provider for reproducible testing
+    engine = AgnoEngine(provider="mock")
 
     test_queries = [
         "write documentation about LangGraph",

@@ -5,17 +5,17 @@ import io
 # Ensure UTF-8 output encoding on Windows terminal
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
-from core.engine import LoomEngine
+from core.engine import AgnoEngine
 
 def print_res(res):
     print("\n🔍 Internal Pipeline Execution & Thoughts")
     for t in res.thoughts:
         print(f"  {t}")
-    print(f"\nLoom:\n{res.answer}")
+    print(f"\nAgno:\n{res.answer}")
     print(f"\nExecution Time: {res.execution_time_ms}ms | Provider: {res.provider_used}\n")
 
 async def main():
-    engine = LoomEngine()
+    engine = AgnoEngine()
 
     print("\n" + "="*80)
     print("DEMO 1: Playlist Pipeline with YouTube oEmbed Normalization & Transcripts")

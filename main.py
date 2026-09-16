@@ -8,7 +8,7 @@ if str(root_dir) not in sys.path:
     sys.path.insert(0, str(root_dir))
 
 from config import settings
-from core.engine import LoomEngine
+from core.engine import AgnoEngine
 
 try:
     from rich.console import Console
@@ -33,14 +33,14 @@ async def run_interactive(provider: str, model: str, verbose: bool = True):
     import uuid
     session_id = str(uuid.uuid4())[:8]  # Generate unique session ID
     
-    engine = LoomEngine(provider=provider, model=model)
+    engine = AgnoEngine(provider=provider, model=model)
     provider_name = engine.llm_client.provider.upper()
     model_name = engine.llm_client.model
 
     if HAS_RICH:
         console.print(
             Panel.fit(
-                f"[bold cyan]Welcome to Loom Dynamic AI Agent[/bold cyan]\n"
+                f"[bold cyan]Welcome to Agno Dynamic AI Agent[/bold cyan]\n"
                 f"[yellow]Active Provider:[/yellow] {provider_name} | [yellow]Model:[/yellow] {model_name}\n"
                 f"[green]Available Tools:[/green] {', '.join(engine.list_available_tools())}\n"
                 f"[dim]Session ID: {session_id} (memory enabled)[/dim]\n"
@@ -49,7 +49,7 @@ async def run_interactive(provider: str, model: str, verbose: bool = True):
             )
         )
     else:
-        safe_print(f"--- Welcome to Loom Dynamic AI Agent ---")
+        safe_print(f"--- Welcome to Agno Dynamic AI Agent ---")
         safe_print(f"Active Provider: {provider_name} | Model: {model_name}")
         safe_print(f"Available Tools: {', '.join(engine.list_available_tools())}\n")
         safe_print(f"Session ID: {session_id} (memory enabled)")
@@ -64,9 +64,9 @@ async def run_interactive(provider: str, model: str, verbose: bool = True):
             cleaned_input = user_input.strip()
             if cleaned_input.lower() in ["exit", "quit", "q"]:
                 if HAS_RICH:
-                    console.print("[yellow]Exiting Loom Dynamic Agent. Goodbye![/yellow]")
+                    console.print("[yellow]Exiting Agno Dynamic Agent. Goodbye![/yellow]")
                 else:
-                    safe_print("Exiting Loom Dynamic Agent. Goodbye!")
+                    safe_print("Exiting Agno Dynamic Agent. Goodbye!")
                 break
 
             if not cleaned_input:
@@ -146,7 +146,7 @@ async def run_interactive(provider: str, model: str, verbose: bool = True):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Loom Dynamic AI Agent - LLM-driven reasoning and tool use")
+    parser = argparse.ArgumentParser(description="Agno Dynamic AI Agent - LLM-driven reasoning and tool use")
     parser.add_argument(
         "--provider",
         type=str,
