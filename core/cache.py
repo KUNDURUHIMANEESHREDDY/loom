@@ -1,5 +1,5 @@
 """
-Cache module for Agno AI Engine.
+Cache module for Loom AI Engine.
 
 Provides caching utilities for tool results and frequently accessed data.
 """

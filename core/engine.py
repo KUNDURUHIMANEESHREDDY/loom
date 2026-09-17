@@ -1,5 +1,5 @@
 """
-Agno AI Engine - Dynamic Agent Orchestration Module
+Loom AI Engine - Dynamic Agent Orchestration Module
 
 This module provides a fully dynamic LLM-driven agent that:
 - Uses LLM reasoning for dynamic tool selection and workflow planning
@@ -625,7 +625,7 @@ class TransformEngine:
             return {"pdf_path": str(pdf_path), "success": True, "note": "Placeholder PDF"}
 
 
-class AgnoEngine:
+class LoomEngine:
     """
     Dynamic AI Agent Engine with LLM-driven reasoning and tool selection.
     

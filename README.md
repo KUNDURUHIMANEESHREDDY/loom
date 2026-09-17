@@ -1,6 +1,6 @@
-# Agno 🧵
+# Loom 🧵
 
-**Agno** is an AI agent system powered by Knowledge Graphs, Hybrid RAG Retrieval, and Multi-Provider LLM Integration (**Google Gemini**, **DeepSeek**, **Groq**, and **Ollama**).
+**Loom** is an AI agent system powered by Knowledge Graphs, Hybrid RAG Retrieval, and Multi-Provider LLM Integration (**Google Gemini**, **DeepSeek**, **Groq**, and **Ollama**).
 
 ---
 
@@ -23,7 +23,7 @@ LLM_PROVIDER=google  # google, deepseek, groq, ollama, or mock
 GOOGLE_API_KEY=your_key_here
 ```
 
-### 3. Run Agno CLI
+### 3. Run Loom CLI
 ```bash
 python main.py
 ```
@@ -43,4 +43,4 @@ python main.py --provider mock
 * **`config.py`**: Configuration loading via `pydantic-settings`.
 * **`models/`**: Strongly-typed schemas (`Document`, `Chunk`, `Entity`, `Relation`, `Message`, `AgentResponse`).
 * **`llm/`**: Unified provider client supporting Google, DeepSeek, Groq, Ollama, and fallback mock engine.
-* **`core/`**: Orchestration state machine (`AgnoEngine`) and task planner (`Planner`).
+* **`core/`**: Orchestration state machine (`LoomEngine`) and task planner (`Planner`).

@@ -17,4 +17,4 @@ dependencies = [
 ]
 
 [project.scripts]
-agno = "main:main"
+loom = "main:main"

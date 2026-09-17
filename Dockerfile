@@ -1,10 +1,10 @@
-# Production Dockerfile for Agno Execution Framework
+# Production Dockerfile for Loom Execution Framework
 FROM python:3.11-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    AGNO_PORT=8000
+    LOOM_PORT=8000
 
 # Set working directory
 WORKDIR /app
@@ -23,8 +23,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create non-root user for security
-RUN useradd -m agnouser && chown -R agnouser:agnouser /app
-USER agnouser
+RUN useradd -m loomuser && chown -R loomuser:loomuser /app
+USER loomuser
 
 # Expose API port
 EXPOSE 8000

@@ -1,5 +1,5 @@
 import asyncio
-from core.engine import AgnoEngine
+from core.engine import LoomEngine
 from core.memory import PersistentMemory
 
 async def test_all():
@@ -9,8 +9,8 @@ async def test_all():
     r = await m.get_relevant_facts('test')
     print(f"✓ Memory works: {len(r) > 0} facts found")
     
-    print("\n=== Testing AgnoEngine ===")
-    e = AgnoEngine(provider='mock')
+    print("\n=== Testing LoomEngine ===")
+    e = LoomEngine(provider='mock')
     resp = await e.process_query('hello')
     print(f"✓ Engine works: {resp.answer is not None}")
     print(f"✓ Tools available: {[tool.name for tool in e.tool_registry.list_tools()]}")

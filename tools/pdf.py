@@ -1,5 +1,5 @@
 """
-PDF generation tool for Agno AI Engine.
+PDF generation tool for Loom AI Engine.
 
 Creates PDF documents from markdown content using reportlab.
 """

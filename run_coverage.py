@@ -5,7 +5,7 @@ import subprocess
 
 def run_coverage():
     print("=" * 60)
-    print("         AGNO ENGINE AUTOMATED CODE COVERAGE RUNNER         ")
+    print("         LOOM ENGINE AUTOMATED CODE COVERAGE RUNNER         ")
     print("=" * 60)
 
     try:

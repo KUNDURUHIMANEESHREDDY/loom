@@ -387,7 +387,7 @@ if __name__ == "__main__":
 ```
 
 ---
-*LangGraph Production Engineering Manual — Compiled by Agno Systems Architecture Engine*
+*LangGraph Production Engineering Manual — Compiled by Loom Systems Architecture Engine*
 """
 
 def generate_master_pdf():

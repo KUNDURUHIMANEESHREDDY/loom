@@ -1,5 +1,5 @@
 """
-Observability module for Agno AI Engine.
+Observability module for Loom AI Engine.
 
 Provides tracing, structured logging, and metrics collection.
 """
@@ -68,7 +68,7 @@ class TraceContext:
 class StructuredLogger:
     """Structured logger for consistent log formatting."""
     
-    def __init__(self, service_name: str = "agno-engine"):
+    def __init__(self, service_name: str = "loom-engine"):
         self.service_name = service_name
     
     def log(self, level: str, message: str, trace_id: Optional[str] = None, 

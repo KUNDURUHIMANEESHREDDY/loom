@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "Agno AI Agent"
+    app_name: str = "Loom AI Agent"
     environment: str = "development"
     
     # LLM Settings

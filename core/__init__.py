@@ -1,10 +1,10 @@
-"""Core Agno Engine Module"""
-from .engine import AgnoEngine
+"""Core Loom Engine Module"""
+from .engine import LoomEngine
 from .observability import TraceContext, StructuredLogger, global_metrics
 from .cache import global_tool_cache
 
 __all__ = [
-    "AgnoEngine",
+    "LoomEngine",
     "TraceContext", 
     "StructuredLogger",
     "global_metrics",

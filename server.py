@@ -2,13 +2,13 @@ import time
 from typing import Dict, Any, Optional, List
 from fastapi import FastAPI, HTTPException, Header, Response
 from pydantic import BaseModel, Field
-from core.engine import AgnoEngine
+from core.engine import LoomEngine
 from core.observability import TraceContext, StructuredLogger, global_metrics
 from core.cache import global_tool_cache
 
 app = FastAPI(
-    title="Agno Execution Framework API",
-    description="Production REST API for Agno AI Engineering Framework",
+    title="Loom Execution Framework API",
+    description="Production REST API for Loom AI Engineering Framework",
     version="2.0.0",
 )
 
@@ -29,8 +29,8 @@ async def get_dashboard():
 import os
 from config import settings
 
-engine = AgnoEngine(provider="mock" if os.getenv("TESTING") == "true" or settings.llm_provider == "mock" else None)
-logger = StructuredLogger(service_name="agno-api")
+engine = LoomEngine(provider="mock" if os.getenv("TESTING") == "true" or settings.llm_provider == "mock" else None)
+logger = StructuredLogger(service_name="loom-api")
 
 
 class ChatRequest(BaseModel):
@@ -58,7 +58,7 @@ class ChatResponse(BaseModel):
 async def health_check():
     return {
         "status": "healthy",
-        "service": "agno-engine",
+        "service": "loom-engine",
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "registered_pipelines": engine.artifact_pipeline_registry.list_types(),
     }
